@@ -1,0 +1,3 @@
+display_name: Small Diff
+short_description: Reduce changes to the needed diff
+default_prompt: Review this diff and keep only the necessary changes.

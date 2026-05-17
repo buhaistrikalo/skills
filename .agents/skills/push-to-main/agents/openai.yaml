@@ -1,0 +1,3 @@
+display_name: Push To Main
+short_description: Commit and push to main carefully
+default_prompt: Push these changes to main.

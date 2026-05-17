@@ -1,0 +1,3 @@
+display_name: Skill Maker
+short_description: Add a new skill to this repo
+default_prompt: Turn this idea into a new skill in this repository.

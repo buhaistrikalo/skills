@@ -1,0 +1,3 @@
+display_name: Trace Bug
+short_description: Trace bugs from real code paths
+default_prompt: Explain why this bug happens by checking the real code path.

@@ -1,0 +1,3 @@
+display_name: Figma Fix
+short_description: Apply focused Figma UI fixes
+default_prompt: Update this UI to match the provided Figma reference.
