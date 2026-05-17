@@ -1,41 +1,101 @@
 ---
 name: skill-maker
-description: Use when the user wants to create a new skill in this repository from an idea, workflow, or area of expertise. Also use when they want to add the skill folder, SKILL.md, agents/openai.yaml, and README entry in one pass.
+description: Use when the user wants to create, improve, or package an AI agent skill for a public repo, personal expertise, or reusable workflow. Also use when they mention writing a skill, skill ideas, skill positioning, skill README/SKILL.md, or turning know-how into a concise reusable agent workflow.
 metadata:
-  short-description: Add a new skill to this repo
+  short-description: Create sharp reusable agent skills
 ---
 
 # Skill Maker
 
-Create a publishable skill in this repository from a rough idea.
+Help the user turn a narrow piece of expertise into a practical AI-agent skill.
+
+## Goal
+
+Create skills that feel useful, specific, and credible. A good skill should make an agent noticeably better at one recurring job, not explain a broad topic.
 
 ## Workflow
 
-1. Choose a sharp name.
-   - Use short kebab-case.
-   - Prefer concrete task names over broad categories.
-   - If the user dislikes a name, suggest simpler alternatives.
+1. Pick a narrow job.
+   - Prefer "fix failing GitHub Actions from logs" over "DevOps".
+   - Prefer "write competitor alternative pages" over "marketing".
+   - Prefer tasks with repeated steps, hidden judgment, failure modes, or templates.
 
-2. Write the skill.
-   - Create `.agents/skills/<skill-name>/SKILL.md`.
-   - Write frontmatter with `name`, `description`, and `metadata.short-description`.
-   - Keep the body concise: purpose, workflow, guardrails, output.
+2. Define the trigger.
+   - Write the `description` as activation logic, not marketing copy.
+   - Include user phrases that should trigger the skill.
+   - Exclude nearby tasks that should not trigger it.
 
-3. Add UI metadata.
-   - Create `.agents/skills/<skill-name>/agents/openai.yaml`.
-   - Include `display_name`, `short_description`, and `default_prompt`.
+3. Write the minimum operating procedure.
+   - Start with what the agent should do first.
+   - Add decision points only where they change behavior.
+   - Include validation steps and common mistakes.
+   - Do not teach general knowledge the model already has.
 
-4. Update repository docs.
-   - Add the skill to the README table.
-   - Keep the README description short and outcome-focused.
+4. Add resources only when they earn their weight.
+   - `scripts/` for repeatable commands or fragile transformations.
+   - `references/` for long examples, schemas, checklists, or provider docs.
+   - `assets/` for templates, images, boilerplate, or files copied into outputs.
 
-5. Verify.
-   - Confirm files exist.
-   - Run `git diff --check`.
-   - Review `git status --short`.
+5. Package it for discovery.
+   - Put the skill under `.agents/skills/<skill-name>/`.
+   - Include `SKILL.md`.
+   - Add `agents/openai.yaml` when the repo uses Codex skill UI metadata.
+
+## Skill Shape
+
+Use this default structure:
+
+```markdown
+---
+name: short-kebab-name
+description: Use when the user wants to ... Also use when they mention ...
+metadata:
+  short-description: Verb phrase under 60 chars
+---
+
+# Human Title
+
+One sentence: what this skill makes the agent better at.
+
+## Workflow
+
+1. First concrete step.
+2. Second concrete step.
+3. Verification or delivery step.
 
 ## Guardrails
 
-- Do not add a README inside each skill folder.
-- Do not add scripts or references unless the workflow needs them.
-- Do not make the skill a generic essay; make it an operating procedure.
+- Avoid ...
+- Prefer ...
+- Ask only when ...
+```
+
+## Quality Bar
+
+- The skill has one clear job.
+- The trigger description is more specific than the title.
+- The workflow changes how the agent behaves.
+- The body is short enough to read in one pass.
+- It names failure modes that a generic prompt would miss.
+- It includes verification when the task can be checked.
+
+## Idea Filter
+
+Good skill ideas usually pass at least two checks:
+
+- The task repeats often.
+- The user has a recognizable point of view.
+- The task has a concrete artifact at the end.
+- Mistakes are expensive or embarrassing.
+- There is a reliable workflow that most people skip.
+- The public title makes expertise legible.
+
+## Output
+
+When creating a skill, produce the files directly when working in a repo. Otherwise, return:
+
+- skill name
+- trigger description
+- final `SKILL.md`
+- optional resource list
+- one-line positioning for the public repo

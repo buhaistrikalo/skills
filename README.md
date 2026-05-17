@@ -20,10 +20,9 @@ npx skills@latest add buhaistrikalo/skills
 | --- | --- |
 | [`figma-fix`](./.agents/skills/figma-fix/SKILL.md) | Помогает внести точечное frontend-изменение по Figma-ноде, скриншоту или визуальному референсу. |
 | [`push-to-main`](./.agents/skills/push-to-main/SKILL.md) | Помогает аккуратно закоммитить и запушить изменения в `main`, не захватив лишние файлы. |
-| [`skill-maker`](./.agents/skills/skill-maker/SKILL.md) | Помогает из идеи сделать новый скилл в этом репозитории: `SKILL.md`, `openai.yaml` и запись в README. |
+| [`skill-maker`](./.agents/skills/skill-maker/SKILL.md) | Помогает превратить узкий workflow или экспертизу в короткий переиспользуемый скилл для агента. |
 | [`small-diff`](./.agents/skills/small-diff/SKILL.md) | Помогает уменьшить разросшийся diff до действительно нужных изменений. |
 | [`trace-bug`](./.agents/skills/trace-bug/SKILL.md) | Помогает объяснить баг через реальный путь кода и данных, а не через догадки. |
-| [`write-a-skill`](./.agents/skills/write-a-skill/SKILL.md) | Помогает превратить узкий workflow или экспертизу в короткий переиспользуемый скилл для агента. |
 
 ## Структура репозитория
 
