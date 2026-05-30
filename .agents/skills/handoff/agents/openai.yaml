@@ -1,0 +1,3 @@
+display_name: Handoff
+short_description: Prepare an agent handoff document
+default_prompt: Write a handoff for the next agent to continue this session.
