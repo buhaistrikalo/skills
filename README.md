@@ -19,6 +19,7 @@ npx skills@latest add buhaistrikalo/skills
 | Скилл | Что делает |
 | --- | --- |
 | [`figma-fix`](./.agents/skills/figma-fix/SKILL.md) | Помогает внести точечное frontend-изменение по Figma-ноде, скриншоту или визуальному референсу. |
+| [`grill-with-docs`](./.agents/skills/grill-with-docs/SKILL.md) | Помогает стресс-тестировать план через доменную терминологию, код и ADR-документы. |
 | [`handoff`](./.agents/skills/handoff/SKILL.md) | Помогает подготовить короткий handoff-документ для следующего агента или новой сессии. |
 | [`push-to-main`](./.agents/skills/push-to-main/SKILL.md) | Помогает аккуратно закоммитить и запушить изменения в `main`, не захватив лишние файлы. |
 | [`skill-maker`](./.agents/skills/skill-maker/SKILL.md) | Помогает превратить узкий workflow или экспертизу в короткий переиспользуемый скилл для агента. |

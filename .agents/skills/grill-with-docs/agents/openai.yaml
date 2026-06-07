@@ -1,0 +1,3 @@
+display_name: Grill With Docs
+short_description: Stress-test plans against domain docs
+default_prompt: Grill this plan against the project's domain language and docs.
