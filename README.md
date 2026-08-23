@@ -25,5 +25,4 @@ npx skills@latest add buhaistrikalo/skills
 | [`skill-maker`](./.agents/skills/skill-maker/SKILL.md) | Помогает превратить узкий workflow или экспертизу в короткий переиспользуемый скилл для агента. |
 | [`small-diff`](./.agents/skills/small-diff/SKILL.md) | Помогает уменьшить разросшийся diff до действительно нужных изменений. |
 | [`trace-bug`](./.agents/skills/trace-bug/SKILL.md) | Помогает объяснить баг через реальный путь кода и данных, а не через догадки. |
-
-
+| [`verify-and-close`](./.agents/skills/verify-and-close/SKILL.md) | Помогает проверить задачу по критериям, runtime и тестам и закрыть её только при подтверждённом результате. |

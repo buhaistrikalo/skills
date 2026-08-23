@@ -1,0 +1,3 @@
+display_name: Verify And Close
+short_description: Verify tasks before closing them
+default_prompt: Verify this task end to end, fix it if needed, and close it only after the evidence passes.
