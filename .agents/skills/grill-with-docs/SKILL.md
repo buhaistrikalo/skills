@@ -23,23 +23,29 @@ Challenge a plan against the existing domain model, sharpen the language, and ca
    - Keep all generated domain docs under `.agents/`; do not create root `CONTEXT.md`, root `docs/adr/`, or context docs inside the application source tree.
 
 3. Interview one decision at a time.
+   - Map the plan as a design tree: each decision can unlock dependent decisions further down the tree.
    - Ask exactly one question, wait for feedback, then continue.
    - For every question, give your recommended answer and the reason.
-   - Walk the design tree by resolving dependencies between decisions before moving to downstream choices.
+   - After each answer, recompute the next unresolved decision. Do not ask about a choice whose prerequisites are still open.
    - If code can answer part of the question, inspect it first and make the question more precise.
 
-4. Challenge the plan against domain language.
+4. Keep facts and decisions separate.
+   - Finding facts is the agent's job: inspect the codebase, documentation, and available tools instead of asking the user for information that can be discovered.
+   - Decisions are the user's job: present the trade-off and recommendation, then wait. Do not silently choose a material product or design decision.
+   - Finish the session only when every relevant branch is resolved or consciously out of scope, with no material assumption left implicit. Before acting on the result, confirm that you and the user share the same understanding.
+
+5. Challenge the plan against domain language.
    - If the user uses a term that conflicts with an existing glossary entry, call it out immediately.
    - If the user uses vague or overloaded language, propose a precise canonical term.
    - Stress-test relationships with concrete scenarios and edge cases.
    - When the user states how something works, check whether the code agrees. Surface contradictions directly.
 
-5. Update `.agents/**/CONTEXT.md` inline when terms are resolved.
+6. Update `.agents/**/CONTEXT.md` inline when terms are resolved.
    - Capture resolved terms immediately instead of batching them for the end.
    - Use `references/CONTEXT-FORMAT.md`.
    - Keep `CONTEXT.md` as a glossary only. Do not put implementation details, API routes, file paths, database choices, task lists, or design notes in it.
 
-6. Offer ADRs sparingly.
+7. Offer ADRs sparingly.
    - Offer an ADR only when the decision is hard to reverse, surprising without context, and the result of a real trade-off.
    - If any of those checks fails, skip the ADR.
    - Use `references/ADR-FORMAT.md`.
