@@ -1,0 +1,3 @@
+display_name: To HTML
+short_description: Visualize plans and architecture
+default_prompt: Create an HTML decision document that shows the current architecture, proposed change, affected layers, risks, and acceptance checks.

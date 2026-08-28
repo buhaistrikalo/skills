@@ -22,6 +22,7 @@ npx skills@latest add buhaistrikalo/skills
 | [`handoff`](./.agents/skills/handoff/SKILL.md) | Помогает подготовить короткий handoff-документ для следующего агента или новой сессии. |
 | [`push-to-main`](./.agents/skills/push-to-main/SKILL.md) | Помогает аккуратно закоммитить и запушить изменения в `main`, не захватив лишние файлы. |
 | [`skill-maker`](./.agents/skills/skill-maker/SKILL.md) | Помогает превратить узкий workflow или экспертизу в короткий переиспользуемый скилл для агента. |
+| [`to-html`](./.agents/skills/to-html/SKILL.md) | Превращает план или архитектурное решение в самостоятельный HTML-документ со связями, влиянием и критериями проверки. |
 | [`small-diff`](./.agents/skills/small-diff/SKILL.md) | Помогает уменьшить разросшийся diff до действительно нужных изменений. |
 | [`trace-bug`](./.agents/skills/trace-bug/SKILL.md) | Помогает объяснить баг через реальный путь кода и данных, а не через догадки. |
 | [`verify-and-close`](./.agents/skills/verify-and-close/SKILL.md) | Помогает проверить задачу по критериям, runtime и тестам и закрыть её только при подтверждённом результате. |
