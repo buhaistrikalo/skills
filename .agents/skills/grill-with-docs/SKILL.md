@@ -24,15 +24,17 @@ Challenge a plan against the existing domain model, sharpen the language, and ca
 
 3. Interview one decision at a time.
    - Map the plan as a design tree: each decision can unlock dependent decisions further down the tree.
-   - Ask exactly one question, wait for feedback, then continue.
+   - Ask only when a new unresolved choice materially changes the product behavior, domain model, or design. Ask one decision question at a time and wait for the answer before doing work that depends on it.
+   - Use decisions and authorization already given in the conversation. Do not ask the user to approve the same choice again; handle routine implementation details within the agreed scope.
    - For every question, give your recommended answer and the reason.
    - After each answer, recompute the next unresolved decision. Do not ask about a choice whose prerequisites are still open.
    - If code can answer part of the question, inspect it first and make the question more precise.
 
 4. Keep facts and decisions separate.
    - Finding facts is the agent's job: inspect the codebase, documentation, and available tools instead of asking the user for information that can be discovered.
-   - Decisions are the user's job: present the trade-off and recommendation, then wait. Do not silently choose a material product or design decision.
-   - Finish the session only when every relevant branch is resolved or consciously out of scope, with no material assumption left implicit. Before acting on the result, confirm that you and the user share the same understanding.
+   - New material decisions are the user's job: present the trade-off and recommendation, then wait. Do not silently choose an unresolved material product or design decision.
+   - When relevant material branches are resolved or consciously out of scope, summarize the agreed result and proceed with already authorized work without another confirmation. If the request was discussion only, deliver the result without expanding into implementation.
+   - Reopen a resolved decision only when new evidence invalidates its premises or the user changes the scope. Explain what changed and ask only about the newly unresolved choice.
 
 5. Challenge the plan against domain language.
    - If the user uses a term that conflicts with an existing glossary entry, call it out immediately.
@@ -85,7 +87,7 @@ Multi-context repos:
 ## Guardrails
 
 - Do not ask the user questions that code or existing docs can answer.
-- Do not ask a bundle of questions. One question per turn is the point of the skill.
+- Do not ask a bundle of questions or invent a question when no material decision remains. Resolve one decision at a time.
 - Do not let `CONTEXT.md` become a spec, scratchpad, task list, or architecture document.
 - Do not create ADRs for obvious, reversible, or no-alternative decisions.
 - Do not write domain documentation outside `.agents/` unless the user explicitly asks.

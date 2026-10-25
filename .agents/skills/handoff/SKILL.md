@@ -28,8 +28,10 @@ Create a compact handoff document so a fresh agent can continue the current work
    - Do not include API keys, passwords, tokens, private credentials, or unnecessary personally identifiable information.
    - Replace sensitive values with clear placeholders such as `[REDACTED_API_KEY]`.
 
-5. Save the handoff outside the workspace.
-   - Write the document to the user's OS temporary directory, not the current repository.
+5. Choose the handoff location.
+   - Use the user's explicit path first.
+   - Otherwise use the project's established handoff directory when project instructions or existing handoff documents identify one. Do not invent a project convention from an unrelated docs folder.
+   - If neither applies, use the user's OS temporary directory as a fallback. Mention its temporary nature when delivering the file.
    - Use a descriptive filename such as `handoff-<short-topic>.md`.
    - In the final response, provide the saved path and a brief note on what the handoff covers.
 
@@ -48,5 +50,5 @@ The handoff document should usually include:
 ## Guardrails
 
 - Do not copy long content from PRDs, plans, ADRs, issues, commits, or diffs; link to them.
-- Do not save the handoff inside the project unless the user explicitly asks.
+- Follow the location priority above; a project handoff directory does not need separate approval when it is already established.
 - Do not expose secrets while trying to be complete.
